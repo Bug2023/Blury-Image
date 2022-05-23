@@ -1,1 +1,1 @@
-This is a automation code for creating jira ticket.
+This project blure the image 0 to 100 %.
