@@ -3,10 +3,10 @@ const bg = document.querySelector('.bg')
 
 let load = 0
 
-let int = setInterval(blurring, 20)
+let int = setInterval(blurring, 1)
 
 function blurring() {
-  load++
+  setInterval(load++,0.005) 
 
   if (load > 99) {
     clearInterval(int)
@@ -16,5 +16,4 @@ function blurring() {
   
 }
 
-// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 
