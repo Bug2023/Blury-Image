@@ -30,18 +30,16 @@ jobs:
         uses: denoland/setup-deno@004814556e37c54a2f6e31384c9e18e983317366
         with:
           deno-version: v1.x
-      -
-       name: Login to DockerHub
-        uses: docker/login-action@v2
+      
+          
+      -name: Build and push
+        uses: mr-smithers-excellent/docker-build-push@v4
         with:
+          image : krishna2023/blury_image
+          registry: docker.io
           username: ${{ secrets.DOCKER_UNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          image : krishna2023/blury_image
+          
+          
 
      
